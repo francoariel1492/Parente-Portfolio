@@ -1,27 +1,7 @@
 import Head from "next/head";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { useState } from "react";
-import html from "/public/icons/html.svg"
-import css3 from "/public/icons/css3.svg"
-import js from "/public/icons/js.svg"
-import react from "/public/icons/react.svg"
-import mui from "/public/icons/mui.svg"
-import bs from "/public/icons/bs.svg"
-import tail from "/public/icons/tail.svg"
-import git from "/public/icons/git.svg"
-import node from "/public/icons/node.svg"
-import github from "/public/icons/github.png"
-import jira from "/public/icons/jira.svg"
-import next from "/public/icons/next.svg"
-import sass from "/public/icons/sass.svg"
-import npm from "/public/icons/npm.svg"
-import linkedin from "/public/icons/linkedin.png"
-import whatsapp from "/public/icons/whatsapp.png"
-import firebase from "/public/icons/firebase.svg"
 import deved from "/public/me.png";
-import code from "/public/code.svg";
-import design from "/public/design.svg";
-import teamwork from "/public/teamwork.svg";
 import Image from "next/image";
 import maga from "/public/maga.jpg";
 import maga2 from "/public/maga2.jpg";
@@ -32,6 +12,70 @@ import hora2 from "/public/hora2.jpg";
 import chords from "/public/chords.jpg";
 import maderas from "/public/maderas.jpg";
 import maderas2 from "/public/maderas2.jpg";
+
+const importAll = (r) => r.keys().map(r);
+
+const frontEnd = importAll(
+  require.context("/public/icons/front", false, /\.svg$/)
+);
+const backEnd = importAll(
+  require.context("/public/icons/back", false, /\.svg$/)
+);
+const dbSvg = importAll(require.context("/public/icons/db", false, /\.svg$/));
+const toolsSvg = importAll(
+  require.context("/public/icons/tools", false, /\.svg$/)
+);
+const social = importAll(
+  require.context("/public/icons/social", false, /\.png$/)
+);
+const certificates = importAll(
+  require.context("/public/certificates", false, /\.png$/)
+);
+const services = importAll(
+  require.context("/public/services", false, /\.svg$/)
+);
+
+const socialLinks = [
+  "mailto:francoariel1492@gmail.com",
+  "https://www.linkedin.com/in/francoariel1492/",
+  "https://wa.me/+393497077518",
+];
+
+const certificatesLinks = [
+  "https://www.coderhouse.com/certificados/63121203afcd2b0019f5f7fa",
+  "https://www.coderhouse.com/certificados/634f6f4db5e703000e5019d7",
+  "https://www.coderhouse.com/certificados/639467a13b6c94000ecd0994",
+  "https://www.coderhouse.com/certificados/639467a23b6c94000ecd0997",
+  "#",
+];
+
+const certificateTitle = [
+  "Web Development",
+  "Javascript",
+  "React Js",
+  "Front End Developer Degree",
+  "PC - Repair",
+];
+
+const certificatesDescription = [
+  "Website development using html and css, version control with Git, preprocessors, SEO, libraries and frameworks.",
+  "Development of web applications with Javascript, introduction to libraries and frameworks, AJAX, fetch, promises, API.",
+  "SPA - Ecommerce application development. Wok with components with React Js. Backend simulation with Firebase.",
+  "Bootcamp that I started in June 2022 and ended in December 2022. Includes the 3 previous certificates.",
+  "PC repair course that I attended at the UTN Munro headquarters in 2010",
+];
+
+const servicesTitles = [
+  "Beautiful Designs",
+  "Teamwork",
+  "Code your dream"
+]
+
+const servicesInfo = [
+  "Achieve a design that meets your expectations at a professional level",
+  "In an industry with so much growth, the only way to reach new horizons is by creating new connections and working as a team.",
+  "Do you have the 2023 application in your hands? Together we will make it!"
+]
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -64,7 +108,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="https://drive.google.com/u/0/uc?id=1irRY6vqEagWEYg2HrXtOaXPBEhSMgZxT&export=download"
+                  href="https://drive.google.com/file/d/1YV0kVvhsgOJrYe9o7Yn0uqpyZiIKm-1w/view?usp=sharing"
                 >
                   Resume
                 </a>
@@ -76,350 +120,140 @@ export default function Home() {
               Franco Ariel Parente
             </h2>
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-              Front End Developer
+              Full Stack Engineer MERN
             </h3>
-            <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Hello there!, My friends call me Napo. I am a spontaneous and
-              friendly person with a great desire to continue learning and a
-              firm believer in teamwork. I started my studies as a web developer
-              last year and discovered a fascinating universe. I speak three
-              languages, English, Spanish and Italian. I am also a musician and
-              a traveler, thats why some of my projects are related to these
-              topics 😀.
+            <p className="text-md leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
+              Hello there! My friends call me Napo, and I'm thrilled to meet
+              you. I'm a web developer with a passion for learning and a love of
+              collaboration. As for my personal interests, I speak English,
+              Spanish, and Italian fluently, and I've had the opportunity to use
+              my language skills to connect with people from all over the world.
+              When I'm not coding, you'll find me playing guitar or planning my
+              next adventure abroad.
             </p>
             <div className="mx-auto  w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image src={deved} layout="fill" objectFit="cover" alt="webimg" />
             </div>
-            <div className="pt-5">
-              <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
-                Tools
+            <div className="py-5 m-5">
+              <h3 className="text-2xl py-2 font-medium dark:text-white md:text-6xl">
+                Front End Skills
               </h3>
               <div className="text-5xl flex flex-wrap justify-center gap-16 py-5 text-gray-600 dark:text-gray-400 p-5 m-5">
-                <Image
-                  src={html}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={css3}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={js}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={react}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={next}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={bs}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={mui}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={tail}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={node}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={git}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={github}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={sass}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={npm}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={firebase}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-                <Image
-                  src={jira}
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
+                {frontEnd.map((image, index) => (
+                  <Image
+                    key={index}
+                    src={image}
+                    className="rounded-lg object-contain"
+                    width={"100%"}
+                    height={"100%"}
+                    alt="webimg"
+                  />
+                ))}
+              </div>
+              <h3 className="text-2xl py-2 font-medium dark:text-white md:text-6xl">
+                Back End Skills
+              </h3>
+              <div className="text-5xl flex flex-wrap justify-center gap-16 py-5 text-gray-600 dark:text-gray-400 p-5 m-5">
+                {backEnd.map((image, index) => (
+                  <Image
+                    key={index}
+                    src={image}
+                    className="rounded-lg object-contain"
+                    width={"100%"}
+                    height={"100%"}
+                    alt="webimg"
+                  />
+                ))}
+              </div>
+              <h3 className="text-2xl py-2 font-medium dark:text-white md:text-6xl">
+                D B
+              </h3>
+              <div className="text-5xl flex flex-wrap justify-center gap-16 py-5 text-gray-600 dark:text-gray-400 p-5 m-5">
+                {dbSvg.map((image, index) => (
+                  <Image
+                    key={index}
+                    src={image}
+                    className="rounded-lg object-contain"
+                    width={"100%"}
+                    height={"100%"}
+                    alt="webimg"
+                  />
+                ))}
+              </div>
+              <h3 className="text-2xl py-2 font-medium dark:text-white md:text-6xl">
+                TOOLS
+              </h3>
+              <div className="text-5xl flex flex-wrap justify-center gap-16 py-5 text-gray-600 dark:text-gray-400 p-5 m-5">
+                {toolsSvg.map((image, index) => (
+                  <Image
+                    key={index}
+                    src={image}
+                    className="rounded-lg object-contain"
+                    width={"100%"}
+                    height={"100%"}
+                    alt="webimg"
+                  />
+                ))}
               </div>
             </div>
           </div>
         </section>
         <section className="text-center">
-          <h3 className="text-2xl py-2 dark:text-white md:text-3xl">Studies</h3>
+          <h3 className="text-2xl py-2 font-medium dark:text-white md:text-6xl">
+            Studies
+          </h3>
           <div className="flex flex-wrap justify-around gap-5 p-5 m-5">
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="https://www.coderhouse.com/certificados/63121203afcd2b0019f5f7fa">
-              <Image
-                  src="/Web Development.png"
-                  layout="responsive"
-                  objectFit="contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-              </a>
-              <div className="p-5">
-                <a href="https://www.coderhouse.com/certificados/63121203afcd2b0019f5f7fa">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Web Development
-                  </h5>
+            {certificates.map((image, index) => (
+              <div
+                key={index}
+                className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700"
+              >
+                <a href={certificatesLinks[index]}>
+                  <Image
+                    src={image}
+                    layout="responsive"
+                    objectFit="contain"
+                    width={"100%"}
+                    height={"100%"}
+                    alt="webimg"
+                  />
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Website development using html and css, version control with
-                  Git, preprocessors, SEO, libraries and frameworks.
-                </p>
-                <a
-                  href="https://www.coderhouse.com/certificados/63121203afcd2b0019f5f7fa"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Certificate
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div className="p-5">
+                  <a href={certificatesLinks[index]}>
+                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                      {certificateTitle[index]}
+                    </h5>
+                  </a>
+                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    {certificatesDescription[index]}
+                  </p>
+                  <a
+                    href={certificatesLinks[index]}
+                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
+                    Certificate
+                    <svg
+                      aria-hidden="true"
+                      className="w-4 h-4 ml-2 -mr-1"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="https://www.coderhouse.com/certificados/634f6f4db5e703000e5019d7">
-              <Image
-                  src="/Javascript.png"
-                  layout="responsive"
-                  objectFit="contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-              </a>
-              <div className="p-5">
-                <a href="https://www.coderhouse.com/certificados/634f6f4db5e703000e5019d7">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Javascript
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Development of web applications with Javascript, introduction
-                  to libraries and frameworks, AJAX, fetch, promises, API.
-                </p>
-                <a
-                  href="https://www.coderhouse.com/certificados/634f6f4db5e703000e5019d7"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Certificate
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="https://www.coderhouse.com/certificados/639467a13b6c94000ecd0994">
-              <Image
-                  src="/React.png"
-                  layout="responsive"
-                  objectFit="contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-              </a>
-              <div className="p-5">
-                <a href="https://www.coderhouse.com/certificados/639467a13b6c94000ecd0994">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    React Js
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  SPA - Ecommerce application development. Wok with components
-                  with React Js. Backend simulation with Firebase.
-                </p>
-                <a
-                  href="https://www.coderhouse.com/certificados/639467a13b6c94000ecd0994"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Certificate
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="https://www.coderhouse.com/certificados/639467a23b6c94000ecd0997">
-              <Image
-                  src="/Carrera.png"
-                  layout="responsive"
-                  objectFit="contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-              </a>
-              <div className="p-5">
-                <a href="https://www.coderhouse.com/certificados/639467a23b6c94000ecd0997">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Front End Developer React Career
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  Career that I started in June 2022 and ended in December 2022.
-                  Includes the 3 previous certificates.
-                </p>
-                <a
-                  href="https://www.coderhouse.com/certificados/639467a23b6c94000ecd0997"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Certificate
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
-              <a href="#">
-              <Image
-                  src="/UTN.jpg"
-                  layout="responsive"
-                  objectFit="contain"
-                  width={"100%"}
-                  height={"100%"}
-                  alt="webimg"
-                />
-              </a>
-              <div className="p-5">
-                <a href="#">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    PC - Repair
-                  </h5>
-                </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                  PC repair course that I attended at the UTN Munro headquarters
-                  in 2010
-                </p>
-                <a
-                  href="#"
-                  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Certificate
-                  <svg
-                    aria-hidden="true"
-                    className="w-4 h-4 ml-2 -mr-1"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
+            ))}
           </div>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Services</h3>
+            <h3 className="text-2xl py-2 font-medium dark:text-white md:text-6xl">
+              Services
+            </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since I began my career as a web developer, I have created
               different websites in which I have had the pleasure of
@@ -434,34 +268,17 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={design} width={100} height={100} alt="webimg" />
+          {services.map((image, index) => (
+            <div key={index} className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+              <Image src={image} width={100} height={100} alt="webimg" />
               <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
+                {servicesTitles[index]}
               </h3>
               <p className="py-2">
-                Achieve a design that meets your expectations at a professional
-                level
+                {servicesInfo[index]}
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={teamwork} width={100} height={100} alt="webimg" />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Teamwork</h3>
-              <p className="py-2">
-                In an industry with so much growth, the only way to reach new
-                horizons is by creating new connections and working as a team.
-              </p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={code} width={100} height={100} alt="webimg" />
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Code your dream
-              </h3>
-              <p className="py-2">
-                Do you have the 2023 application in your hands? Together we will
-                make it!
-              </p>
-            </div>
+            ))}
           </div>
         </section>
         <section className="pt-10 text-center">
@@ -663,24 +480,18 @@ export default function Home() {
             them? do you want to work with me? Add me and I will answer you ASAP
           </p>
           <div className="gap-5 flex flex-row justify-center py-10">
-            <a href="https://www.linkedin.com/in/franco-ariel-parente-41694022a/">
-              <Image
-                  src={linkedin}
+            {social.map((image, index) => (
+              <a key={index} href={socialLinks[index]}>
+                <Image
+                  key={index}
+                  src={image}
                   className="rounded-lg object-contain"
                   width={"50%"}
                   height={"50%"}
                   alt="webimg"
                 />
-            </a>
-            <a href="https://wa.me/393497077518/?text=urlencodedtext">
-              <Image
-                  src={whatsapp}
-                  className="rounded-lg object-contain"
-                  width={"50%"}
-                  height={"50%"}
-                  alt="webimg"
-                />
-            </a>
+              </a>
+            ))}
           </div>
         </section>
       </main>
