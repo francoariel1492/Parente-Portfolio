@@ -60,22 +60,18 @@ const certificateTitle = [
 const certificatesDescription = [
   "Website development using html and css, version control with Git, preprocessors, SEO, libraries and frameworks.",
   "Development of web applications with Javascript, introduction to libraries and frameworks, AJAX, fetch, promises, API.",
-  "SPA - Ecommerce application development. Wok with components with React Js. Backend simulation with Firebase.",
+  "SPA - Ecommerce application development. Work with components with React Js. Backend simulation with Firebase.",
   "Bootcamp that I started in June 2022 and ended in December 2022. Includes the 3 previous certificates.",
   "PC repair course that I attended at the UTN Munro headquarters in 2010",
 ];
 
-const servicesTitles = [
-  "Beautiful Designs",
-  "Teamwork",
-  "Code your dream"
-]
+const servicesTitles = ["Beautiful Designs", "Teamwork", "Code your dream"];
 
 const servicesInfo = [
-  "Achieve a design that meets your expectations at a professional level",
-  "In an industry with so much growth, the only way to reach new horizons is by creating new connections and working as a team.",
-  "Do you have the 2023 application in your hands? Together we will make it!"
-]
+  "Our goal will be create a professional-level design that fully meets your expectations.",
+  "The fast-growing nature of our industry demands that we forge new connections and foster teamwork to achieve greater success and reach new heights.",
+  "Are you equipped with the 2023 application? Let's work together to make it a success!",
+];
 
 const myInfo = `Hello there! My friends call me Napo, and I'm thrilled to meet
 you. I'm a web developer with a passion for learning and a love of
@@ -83,7 +79,7 @@ collaboration. As for my personal interests, I speak English,
 Spanish, and Italian fluently, and I've had the opportunity to use
 my language skills to connect with people from all over the world.
 When I'm not coding, you'll find me playing guitar or planning my
-next adventure abroad.`
+next adventure abroad.`;
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -131,7 +127,7 @@ export default function Home() {
               Full Stack Engineer MERN
             </h3>
             <p className="text-md leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                {myInfo}
+              {myInfo}
             </p>
             <div className="mx-auto  w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image src={deved} layout="fill" objectFit="cover" alt="webimg" />
@@ -270,16 +266,17 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10">
-          {services.map((image, index) => (
-            <div key={index} className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={image} width={100} height={100} alt="webimg" />
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
-                {servicesTitles[index]}
-              </h3>
-              <p className="py-2">
-                {servicesInfo[index]}
-              </p>
-            </div>
+            {services.map((image, index) => (
+              <div
+                key={index}
+                className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1"
+              >
+                <Image src={image} width={100} height={100} alt="webimg" />
+                <h3 className="text-lg font-medium pt-8 pb-2  ">
+                  {servicesTitles[index]}
+                </h3>
+                <p className="py-2">{servicesInfo[index]}</p>
+              </div>
             ))}
           </div>
         </section>
@@ -478,8 +475,7 @@ export default function Home() {
             Contact me
           </h2>
           <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-            Did you like my works? Are you interested in knowing more about
-            them? do you want to work with me? Add me and I will answer you ASAP
+          Did you enjoy my work? Are you interested in learning more or working with me? Feel free to add me and I will respond as soon as possible.
           </p>
           <div className="gap-5 flex flex-row justify-center py-10">
             {social.map((image, index) => (
