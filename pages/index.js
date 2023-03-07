@@ -77,6 +77,14 @@ const servicesInfo = [
   "Do you have the 2023 application in your hands? Together we will make it!"
 ]
 
+const myInfo = `Hello there! My friends call me Napo, and I'm thrilled to meet
+you. I'm a web developer with a passion for learning and a love of
+collaboration. As for my personal interests, I speak English,
+Spanish, and Italian fluently, and I've had the opportunity to use
+my language skills to connect with people from all over the world.
+When I'm not coding, you'll find me playing guitar or planning my
+next adventure abroad.`
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -123,13 +131,7 @@ export default function Home() {
               Full Stack Engineer MERN
             </h3>
             <p className="text-md leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Hello there! My friends call me Napo, and I'm thrilled to meet
-              you. I'm a web developer with a passion for learning and a love of
-              collaboration. As for my personal interests, I speak English,
-              Spanish, and Italian fluently, and I've had the opportunity to use
-              my language skills to connect with people from all over the world.
-              When I'm not coding, you'll find me playing guitar or planning my
-              next adventure abroad.
+                {myInfo}
             </p>
             <div className="mx-auto  w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image src={deved} layout="fill" objectFit="cover" alt="webimg" />
