@@ -22,22 +22,10 @@ import {
   certificates,
   services,
 } from "./iconsData";
+
+import { projectsData } from "./projectsData";
 import meDark from "/public/heroImg/meDark.png";
 import meLight from "/public/heroImg/meLight.png";
-
-import maga from "/public/projectsImg/maga.jpg";
-import maga2 from "/public/projectsImg/maga2.jpg";
-import morowa from "/public/projectsImg/morowa1.jpg";
-import morowa2 from "/public/projectsImg/morowa2.jpg";
-import hora from "/public/projectsImg/hora.jpg";
-import hora2 from "/public/projectsImg/hora2.jpg";
-import chords from "/public/projectsImg/chords.jpg";
-import maderas from "/public/projectsImg/maderas.jpg";
-import maderas2 from "/public/projectsImg/maderas2.jpg";
-import mfc from "/public/projectsImg/mfc.jpg";
-import mfc2 from "/public/projectsImg/mfc2.jpg";
-import buchardo from "/public/projectsImg/buchardo.jpg";
-import buchardo2 from "/public/projectsImg/buchardo2.jpg";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -71,6 +59,7 @@ export default function Home() {
                 <a
                   className="bg-gradient-to-bl from-amber-500 to-orange-500 text-white px-4 py-2 border-none rounded-md ml-8"
                   href="https://drive.google.com/file/d/1YV0kVvhsgOJrYe9o7Yn0uqpyZiIKm-1w/view?usp=sharing"
+                  target="blank"
                 >
                   Resume
                 </a>
@@ -243,275 +232,61 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <section className="pt-10 text-center">
-          <div>
-            <h2 className="text-5xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-6xl">
-              Portfolio
-            </h2>
-            <h3 className="text-2xl py-2 dark:text-white md:text-3xl pb-10">
-              ind below a list of some of the recent projects that I have been
-              involved in: 💻
-            </h3>
-          </div>
+        <section className="pt-5 text-center">
           <div className="flex flex-col gap-1 py-1 lg:flex-row lg:flex-wrap pt-10">
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              🤸🏼 Club Buchardo - Artistic Gymnastics - Freelance Project 🤸🏼
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-              I had the opportunity to work on another freelance project, this
-              time with the artistic gymnastics team of Club Buchardo. For this
-              project, i chose to use React, Email JS, and Framer Motion for
-              development.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/club-buchardo"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1 ">
-              <a href="https://club-buchardo-opiu.vercel.app/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={buchardo}
-                  alt="webimg"
-                />
-              </a>
+            <div className="flex flex-col">
+              <h2 className="text-5xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-6xl">
+                Portfolio
+              </h2>
+              <h3 className="text-2xl py-2 dark:text-white md:text-3xl pb-10">
+                Find below a list of some of the recent projects that I have
+                been involved in: 💻
+              </h3>
             </div>
-            <div className="basis-1/3 flex-1">
-              <a href="https://club-buchardo-opiu.vercel.app/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={buchardo2}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              🗺️ MFC - TRANSPORT 🚚
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-              I developed a web application for transportation and moving
-              services, which connects with the Google Maps API. The project was
-              created using Bootstrap, Vanilla JavaScript, and Google Cloud
-              Platform.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/mfc-removal-app"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1 ">
-              <a href="https://francoariel1492.github.io/mfc-removal-app/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={mfc}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/mfc-removal-app/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={mfc2}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              🎶 Wonderful Chords 🎶
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-            I created a website that provides a variety of beautiful ukulele chord sequences along with corresponding videos demonstrating how they sound. The project was developed using Vanilla JavaScript, CSS, and the Animate library.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/wonderfulchords"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/wonderfulchords/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={chords}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              👚 Morowa Clothes - Ecommerce Project 🛒
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-              I developed an e-commerce store for some friends in Mendoza,
-              Argentina as part of a ReactJS bootcamp project. The development
-              stack included ReactJS, Bootstrap, Firebase, and Toastify.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/ecomerce-parente34800"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1">
-              <a href="https://morowaindumentaria.netlify.app/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={morowa}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a href="https://morowaindumentaria.netlify.app/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={morowa2}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              📸 Magali Moris Fotografia - Freelance Project 🐶
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-              I have had the incredible pleasure of working with Magali, a
-              professional photographer who is dedicated to capturing images of
-              our greatest friends.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/Magali-Moris-Fotografia"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1 ">
-              <a href="https://francoariel1492.github.io/Magali-Moris-Fotografia/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={maga}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/Magali-Moris-Fotografia/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={maga2}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              ✈️ Hora de Viajar - Travel Advisor App 🛫
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-              Own project of a website that explains how to obtain Working
-              Holiday Visas in different countries according to one s
-              nationality.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/Hora-de-Viajar"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/Hora-de-Viajar/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={hora}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/Hora-de-Viajar/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={hora2}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
-              🎸 Maderas Musicales - Music Shop/School - 🎶
-            </h3>
-            <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
-              I did this work for the javascript course, it is a luthier
-              workshop that is in charge of selling wood for the construction of
-              musical instruments, selling instruments built to suit the
-              musicians and also works as a training school for those who want
-              to develop as luthiers.
-            </p>
-            <a
-              className="basis-2/3 flex-1 text-2xl py-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
-              href="https://github.com/francoariel1492/Maderas-Musicales"
-            >
-              Github Repo
-            </a>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/Maderas-Musicales/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={maderas2}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-            <div className="basis-1/3 flex-1">
-              <a href="https://francoariel1492.github.io/Maderas-Musicales/">
-                <Image
-                  className="rounded-lg object-contain"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
-                  src={maderas}
-                  alt="webimg"
-                />
-              </a>
-            </div>
-
-
+            {projectsData.map((project, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-1 py-2 my-2 lg:flex-row lg:flex-wrap pt-10 projectBorder"
+              >
+                <h3 className="basis-2/3 flex-1 text-2xl py-2 dark:text-white md:text-3xl">
+                  {project.projectTitle}
+                </h3>
+                <p className="basis-2/3 flex-1 text-md leading-8 text-gray-800 dark:text-gray-200">
+                  {project.projectDescription}
+                </p>
+                <a
+                  className="basis-2/3 flex-1 text-2xl pt-2 text-orange-500 font-medium dark:text-amber-500 md:text-3xl"
+                  href={project.repoLink}
+                  target="blank"
+                >
+                  Github Repo
+                </a>
+                <div className="basis-1/3 flex-1 ">
+                  <a target="blank" href={project.deployLink}>
+                    <Image
+                      className="rounded-lg object-contain"
+                      width={"100%"}
+                      height={"100%"}
+                      layout="responsive"
+                      src={project.img[0]}
+                      alt="webimg"
+                    />
+                  </a>
+                </div>
+                <div className="basis-1/3 flex-1 ">
+                  <a target="blank" href={project.deployLink}>
+                    <Image
+                      className="rounded-lg object-contain"
+                      width={"100%"}
+                      height={"100%"}
+                      layout="responsive"
+                      src={project.img[1]}
+                      alt="webimg"
+                    />
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
         <section className="text-center">
