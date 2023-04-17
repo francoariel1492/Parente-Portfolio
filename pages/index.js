@@ -239,7 +239,7 @@ export default function Home() {
                 Portfolio
               </h2>
               <h3 className="text-2xl py-2 dark:text-white md:text-3xl pb-10">
-                Find below a list of some of the recent projects that I have
+                💻Find below a list of some of the recent projects that I have
                 been involved in: 💻
               </h3>
             </div>
