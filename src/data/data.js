@@ -43,3 +43,4 @@ export const myInfo = `Hello there! My friends call me Napo, and I'm thrilled to
   my language skills to connect with people from all over the world.
   When I'm not coding, you'll find me playing guitar or planning my
   next adventure abroad.`;
+

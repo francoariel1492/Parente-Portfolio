@@ -11,7 +11,7 @@ import {
   certificatesLinks,
   servicesTitles,
   myInfo,
-} from "./data";
+} from "../src/data/data";
 
 import {
   frontEnd,
@@ -21,9 +21,9 @@ import {
   social,
   certificates,
   services,
-} from "./iconsData";
+} from "../src/data/iconsData";
 
-import { projectsData } from "./projectsData";
+import { projectsData } from "../src/data/projectsData";
 import meDark from "/public/heroImg/meDark.png";
 import meLight from "/public/heroImg/meLight.png";
 
